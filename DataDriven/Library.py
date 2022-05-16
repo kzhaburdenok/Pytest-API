@@ -7,7 +7,7 @@ class Common:
     def __init__(self, FileNamePath, SheetName):
         global workbook, sheet # global means the posibility to use variables in different methods (not only localy in one)
         workbook = openpyxl.load_workbook(FileNamePath) # Loading excel file
-        sheet = workbook(SheetName) # Work sheet
+        sheet = workbook[SheetName] # Work sheet
     
     def fetch_row_count(self):
         rows = sheet.max_row # Qty of rows
@@ -22,7 +22,7 @@ class Common:
         list = []
         for i in range(1, key_columns+1):
             cell = sheet.cell(row=1,column=i)
-            list.insert(cell.value)
+            list.insert(i-1, cell.value)
         return list
 
     def update_request_with_data(self,rowNumber,jsonRequest,keyList):
