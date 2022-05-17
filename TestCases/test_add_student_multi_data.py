@@ -8,7 +8,7 @@ def test_add_student_data():
     file = open('E:\Automation\Pytest-API\Files\StudentData.json') # json of the API
     json_request = json.loads(file.read()) # reading json
     # Excel Code
-    workbook = openpyxl.load_workbook('E:\Automation\Pytest-API\Students.xlsx') # Loading excel file
+    workbook = openpyxl.load_workbook('E:\Automation\Pytest-API\Files\Students.xlsx') # Loading excel file
     sheet = workbook['Sheet1'] # Work sheet
     rows = sheet.max_row # Qty of rows
 
