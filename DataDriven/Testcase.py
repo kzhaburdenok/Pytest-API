@@ -6,10 +6,10 @@ from DataDriven import Library
 
 def test_add_student_data():
     url = "http://thetestingworldapi.com/api/studentsDetails" # API url
-    file = open('E:\Automation\Pytest-API\StudentData.json') # json of the API
+    file = open('E:\Automation\Pytest-API\Files\StudentData.json') # json of the API
     json_request = json.loads(file.read()) # reading json
 
-    object = Library.Common("E:\Automation\Pytest-API\Students.xlsx", "Sheet1") # Taken from Library Class
+    object = Library.Common("E:\Automation\Pytest-API\Files\Students.xlsx", "Sheet1") # Taken from Library Class
     column = object.fetch_columns_count()
     rows = object.fetch_row_count()
     keyList = object.fetch_key_names()

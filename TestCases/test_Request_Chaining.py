@@ -6,7 +6,7 @@ import jsonpath
 def test_add_new_student():
     global id
     url = "http://thetestingworldapi.com/api/studentsDetails"
-    file = open('E:\Automation\Pytest-API\StudentData.json', 'r')
+    file = open('E:\Automation\Pytest-API\Files\StudentData.json', 'r')
     json_request = json.loads(file.read())
 
     response = requests.post(url, json_request)

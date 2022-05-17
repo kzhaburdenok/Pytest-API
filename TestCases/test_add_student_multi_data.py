@@ -5,7 +5,7 @@ import openpyxl
 
 def test_add_student_data():
     url = "http://thetestingworldapi.com/api/studentsDetails" # API url
-    file = open('E:\Automation\Pytest-API\StudentData.json') # json of the API
+    file = open('E:\Automation\Pytest-API\Files\StudentData.json') # json of the API
     json_request = json.loads(file.read()) # reading json
     # Excel Code
     workbook = openpyxl.load_workbook('E:\Automation\Pytest-API\Students.xlsx') # Loading excel file

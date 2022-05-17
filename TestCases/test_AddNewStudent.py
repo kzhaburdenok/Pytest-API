@@ -21,7 +21,7 @@ def test_get_student_data():
 
 def test_update_Student_data():
     url = "http://thetestingworldapi.com/api/studentsDetails/1200718"
-    file = open('E:\Automation\Pytest-API\StudentDataUpdating.json', 'r')
+    file = open('E:\Automation\Pytest-API\Files\StudentDataUpdating.json', 'r')
     json_request = json.loads(file.read())
     response = requests.put(url,json_request)
     print('\nUpdated student status', response.text)   
